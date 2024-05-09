@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -60,6 +44,14 @@ h6 {
   @apply font-extrabold font-sedgwick;
 }
 
+.error-heading {
+  @apply text-[100px] leading-none tracking-[-10px] md:text-[150px];
+}
+
+.error-message {
+  @apply mb-2 text-[26px] font-medium uppercase md:text-[42px];
+}
+
 /* rainbow text */
 .rainbow-text {
   @apply bg-gradient-to-r text-transparent bg-clip-text;
@@ -78,6 +70,11 @@ h6 {
 /* loader height adjustment */
 .h-loader {
   height: calc(100vh - 262px);
+}
+
+/* min height adjustment fav page */
+.min-h-fav {
+  min-height: calc(100vh - 262px);
 }
 
 /* shimmer effect */

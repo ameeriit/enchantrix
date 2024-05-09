@@ -10,6 +10,7 @@ export default function BannerTitle({ title }: { title: string }) {
         </h1>
       </div>
       <Image
+        priority
         className="absolute top-0 left-0 object-cover -z-10 w-full h-full"
         src={bannerBg}
         alt="bannerBg.jpg"

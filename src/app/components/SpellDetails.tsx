@@ -15,7 +15,7 @@ export default async function SpellDetails({ spellDetail }: SpellDetailsProps) {
             <span className="font-sedgwick  text-3xl">Name:</span>{" "}
             {spellDetail?.name}
           </h5>
-          <ModalFavBtn />
+          <ModalFavBtn spellDetail={spellDetail} />
         </div>
         <div className="flex flex-col">
           {spellDetail?.range && (

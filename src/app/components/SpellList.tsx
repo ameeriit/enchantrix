@@ -42,7 +42,7 @@ export default async function SpellList() {
                     >
                       <Link
                         href={`${spell.url}`}
-                        className=" pl-2 pr-4 py-2 rounded-sm hover:bg-violet-50"
+                        className="pl-2 pr-4 py-2 rounded-sm hover:bg-violet-200"
                       >
                         {spell.name}
                         <span className="text-xl font-normal">{` — ${spell.index}`}</span>
