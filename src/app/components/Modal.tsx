@@ -38,7 +38,7 @@ export default function Modal({ children }: ModalProps) {
         openModal ? "block" : "hidden"
       } transition-all fixed top-0 left-0 bg-black w-screen h-screen z-[400]`}
     >
-      <div className="modal-content absolute z-[99999] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white min-w-[300px] max-w-[550px] rounded-lg opacity-100 overflow-y-auto h-auto">
+      <div className="modal-content absolute z-[99999] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white min-w-[300px] max-w-[550px] rounded-lg opacity-100 overflow-y-auto h-auto max-h-[550px]">
         <div>
           <div className="mb-10 px-6 pt-10">{children}</div>
           <div className="bg-white py-3 sticky bottom-0 left-0 shadow-top px-6">
