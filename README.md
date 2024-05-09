@@ -15,7 +15,7 @@ This project is build with DND spell api. Using it i have list spells, view deta
 
 ## View live link
 
-- https://github.com/ameeriit/enchantrix.git
+- https://enchantrix-ameeriits-projects.vercel.app/
 
 ### Features
 
