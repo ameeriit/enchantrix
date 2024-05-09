@@ -1,6 +1,6 @@
 import { getIndividualSpellDetails } from "@/api/getIndividualSpellDetails";
 import SpellDetails from "@/app/components/SpellDetails";
-import LoadingSpinner from "@/app/components/loading/LoadingSpinner";
+import ModalLoading from "@/app/components/loading/ModalLoading";
 import { SpellDetail } from "@/types/spell";
 import { Suspense } from "react";
 
@@ -15,7 +15,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <main>
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<ModalLoading />}>
         <SpellDetails spellDetail={spellDetail} />
       </Suspense>
     </main>

@@ -41,19 +41,23 @@ h4 {
 }
 
 h5 {
-  @apply text-2xl font-bold mb-4;
+  @apply text-2xl font-bold;
 }
 
 h6 {
   @apply text-xl font-bold mb-4;
 }
 
-.paragraph1 {
-  @apply text-lg leading-relaxed mb-4;
+.paragraph {
+  @apply text-xl leading-relaxed mb-4;
 }
 
-.paragraph2 {
-  @apply text-base leading-relaxed mb-4;
+.close-btn {
+  @apply text-lg bg-violet-800 w-full pt-2 pb-1 rounded-md text-white tracking-wider font-sedgwick hover:bg-violet-950;
+}
+
+.headerSpan {
+  @apply font-extrabold font-sedgwick;
 }
 
 /* rainbow text */
@@ -69,6 +73,26 @@ h6 {
     indigo,
     violet
   );
+}
+
+/* loader height adjustment */
+.h-loader {
+  height: calc(100vh - 262px);
+}
+
+/* shimmer effect */
+.shimmer-effect {
+  background: linear-gradient(-45deg, #ebeaea 40%, #fafafa 50%, #eee 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  border-radius: 4px;
+  animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: 0%;
+  }
 }
 
 /* custom scrollbar */

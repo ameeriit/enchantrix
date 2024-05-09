@@ -26,28 +26,24 @@ export const SpellLevel = () => {
   );
 };
 
-export const CloseIcon = ({ className }: { className?: string }) => {
+export const FavoriteIcon = ({
+  onClick,
+  className,
+}: {
+  onClick?: () => void;
+  className?: string;
+}) => {
   return (
     <svg
       className={className}
-      width="36px"
-      height="36px"
+      width="32px"
+      height="32px"
       viewBox="0 0 24 24"
-      fill="none"
+      onClick={onClick}
     >
-      <circle
-        opacity="0.5"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="#1C274C"
-        strokeWidth="1.5"
-      />
       <path
-        d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
-        stroke="#1C274C"
         strokeWidth="1.5"
-        strokeLinecap="round"
+        d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"
       />
     </svg>
   );

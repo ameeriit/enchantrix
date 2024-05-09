@@ -1,9 +1,10 @@
 "use client";
 
-import { CloseIcon } from "@/icons/Icons";
+import ROUTES from "@/routes/routes";
 import { ModalProps } from "@/types/spell";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import CloseBtn from "./Buttons/CloseBtn";
 
 export default function Modal({ children }: ModalProps) {
   const router = useRouter();
@@ -11,14 +12,14 @@ export default function Modal({ children }: ModalProps) {
 
   const handleOnClose = () => {
     setOpenModal(false);
-    router.push("/favorite");
+    router.push(ROUTES.FAVORITE);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const modalElement = document.querySelector(".modal-content");
       if (modalElement && !modalElement.contains(event.target as Node)) {
-        router.push("/favorite");
+        router.push(ROUTES.FAVORITE);
         setOpenModal(false);
       }
     };
@@ -27,7 +28,7 @@ export default function Modal({ children }: ModalProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [router]);
 
   return (
     <div
@@ -35,13 +36,13 @@ export default function Modal({ children }: ModalProps) {
         openModal ? "block" : "hidden"
       } transition-all fixed top-0 left-0 bg-black w-screen h-screen z-[400]`}
     >
-      <div className="modal-content absolute z-[99999] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white  max-w-[550px] rounded-lg opacity-100">
-        <div className="text-end pt-4 px-4">
-          <button onClick={handleOnClose}>
-            <CloseIcon className="transition-all hover:fill-slate-900 hover:scale-105" />
-          </button>
+      <div className="modal-content absolute z-[99999] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white  max-w-[550px] rounded-lg opacity-100 h-[500px] overflow-y-auto">
+        <div className="">
+          <div className="mb-10 px-6 pt-10">{children}</div>
+          <div className="bg-white py-3 sticky bottom-0 left-0 shadow-top px-6">
+            <CloseBtn onClick={handleOnClose} buttonTitle="Close" />
+          </div>
         </div>
-        <div className="px-6 pb-8">{children}</div>
       </div>
     </div>
   );

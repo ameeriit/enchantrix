@@ -1,4 +1,5 @@
 import { SpellDetail } from "@/types/spell";
+import ModalFavBtn from "./Buttons/ModalFavBtn";
 import Modal from "./Modal";
 
 interface SpellDetailsProps {
@@ -9,33 +10,57 @@ export default async function SpellDetails({ spellDetail }: SpellDetailsProps) {
   return (
     <Modal>
       <div className="flex flex-wrap gap-4">
-        <div className="bg-blue-500 text-white p-2 rounded-md">
-          <span className="font-bold">Name:</span> {spellDetail?.name}
+        <div className="flex justify-between w-full items-center">
+          <h5>
+            <span className="font-sedgwick  text-3xl">Name:</span>{" "}
+            {spellDetail?.name}
+          </h5>
+          <ModalFavBtn />
         </div>
-        <div className="bg-green-500 text-white p-2 rounded-md">
-          <span className="font-bold">Description:</span> {spellDetail?.desc}
+        <div className="flex flex-col">
+          {spellDetail?.range && (
+            <h6>
+              <span className="headerSpan">Range:</span> {spellDetail.range}
+            </h6>
+          )}
+          {spellDetail?.material && (
+            <h6>
+              <span className="headerSpan">Material:</span>{" "}
+              {spellDetail.material}
+            </h6>
+          )}
+          {spellDetail?.duration && (
+            <h6>
+              <span className="headerSpan">Duration:</span>{" "}
+              {spellDetail.duration}
+            </h6>
+          )}
+          {spellDetail?.casting_time && (
+            <h6>
+              <span className="headerSpan">Casting Time::</span>{" "}
+              {spellDetail.casting_time}
+            </h6>
+          )}
+          {spellDetail?.attack_type && (
+            <h6>
+              <span className="headerSpan">Attack Type:</span>{" "}
+              {spellDetail.attack_type}
+            </h6>
+          )}
+          {spellDetail?.damage?.damage_type.name && (
+            <h6>
+              <span className="headerSpan">Damage Type:</span>{" "}
+              {spellDetail.damage.damage_type.name}
+            </h6>
+          )}
+          {spellDetail?.school.name && (
+            <h6>
+              <span className="headerSpan">School:</span>{" "}
+              {spellDetail.school.name}
+            </h6>
+          )}
         </div>
-        <div className="bg-yellow-500 text-white p-2 rounded-md">
-          <span className="font-bold">Range:</span> {spellDetail?.range}
-        </div>
-        <div className="bg-red-500 text-white p-2 rounded-md">
-          <span className="font-bold">Duration:</span> {spellDetail?.duration}
-        </div>
-        <div className="bg-purple-500 text-white p-2 rounded-md">
-          <span className="font-bold">Casting Time:</span>{" "}
-          {spellDetail?.casting_time}
-        </div>
-        <div className="bg-indigo-500 text-white p-2 rounded-md">
-          <span className="font-bold">Attack Type:</span>{" "}
-          {spellDetail?.attack_type}
-        </div>
-        <div className="bg-pink-500 text-white p-2 rounded-md">
-          <span className="font-bold">Damage Type:</span>{" "}
-          {spellDetail?.damage?.damage_type.name}
-        </div>
-        <div className="bg-orange-500 text-white p-2 rounded-md">
-          <span className="font-bold">School:</span> {spellDetail?.school.name}
-        </div>
+        <p className="paragraph">{spellDetail?.desc}</p>
       </div>
     </Modal>
   );

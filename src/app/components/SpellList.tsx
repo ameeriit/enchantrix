@@ -20,38 +20,40 @@ export default async function SpellList() {
   );
 
   return (
-    <section className="mb-8">
+    <section className="py-8">
       <div className="container mx-auto">
-        {Object.entries(spellsByLevel).map(([level, spells]) => (
-          <div className="mb-6">
-            <ul className="text-black mb-3" key={level}>
-              <li className="gap-2 flex items-center">
-                <SpellLevel />
+        {Object.entries(spellsByLevel).map(
+          ([level, spells], spellLevelIndex) => (
+            <div className="mb-6" key={level + spellLevelIndex}>
+              <ul className="text-black mb-3" key={level}>
+                <li className="gap-2 flex items-center">
+                  <SpellLevel />
 
-                <p className="paragraph-2 text-3xl font-semibold underline">{`Spell level: ${level}`}</p>
-              </li>
-            </ul>
+                  <p className="paragraph-2 text-3xl font-semibold underline">{`Spell level: ${level}`}</p>
+                </li>
+              </ul>
 
-            <div className="columns-1 md:columns-2 lg:columns-3">
-              <ol className="list-decimal pl-4">
-                {spells.map((spell: Spell, spellIndex) => (
-                  <li
-                    className="text-2xl font-medium px-2 py-1  marker:text-violet-900"
-                    key={`${spell.name}-${spellIndex}`}
-                  >
-                    <Link
-                      href={`${spell.url}`}
-                      className=" pl-2 pr-4 py-2 rounded-sm hover:bg-violet-50"
+              <div className="columns-1 md:columns-2 lg:columns-3">
+                <ol className="list-decimal pl-4">
+                  {spells.map((spell: Spell, spellIndex) => (
+                    <li
+                      className="text-2xl font-medium px-2 py-1  marker:text-violet-900"
+                      key={`${spell.name}-${spellIndex}`}
                     >
-                      {spell.name}
-                      <span className="text-xl font-normal">{` — ${spell.index}`}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ol>
+                      <Link
+                        href={`${spell.url}`}
+                        className=" pl-2 pr-4 py-2 rounded-sm hover:bg-violet-50"
+                      >
+                        {spell.name}
+                        <span className="text-xl font-normal">{` — ${spell.index}`}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </section>
   );

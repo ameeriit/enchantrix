@@ -58,6 +58,7 @@ interface Subclass {
 
 export interface SpellDetail {
   higher_level: any[];
+  material: string;
   index: string;
   name: string;
   desc: string[];
