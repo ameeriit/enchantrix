@@ -8,14 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +22,70 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h1 {
+  @apply text-6xl font-bold mb-4;
+}
+
+h2 {
+  @apply text-5xl font-bold mb-4;
+}
+
+h3 {
+  @apply text-4xl font-bold mb-4;
+}
+
+h4 {
+  @apply text-3xl font-bold mb-4;
+}
+
+h5 {
+  @apply text-2xl font-bold mb-4;
+}
+
+h6 {
+  @apply text-xl font-bold mb-4;
+}
+
+.paragraph1 {
+  @apply text-lg leading-relaxed mb-4;
+}
+
+.paragraph2 {
+  @apply text-base leading-relaxed mb-4;
+}
+
+/* rainbow text */
+.rainbow-text {
+  @apply bg-gradient-to-r text-transparent bg-clip-text;
+  background-image: linear-gradient(
+    to right,
+    white,
+    blue,
+    green,
+    red,
+    rgb(219, 144, 4),
+    indigo,
+    violet
+  );
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000024;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c424f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
 }
