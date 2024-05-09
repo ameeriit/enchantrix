@@ -1,9 +1,10 @@
 "use client";
 
-import ROUTES from "@/routes/routes";
-import { Spell } from "@/types/spell";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+import ROUTES from "@/routes/routes";
+import { Spell } from "@/types/spell";
 
 const FavoriteList = () => {
   const [favorites, setFavorites] = useState<Spell[]>([]);

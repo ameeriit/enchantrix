@@ -1,10 +1,10 @@
 import axios from "axios";
 
 // use this env for baseurl
-// baseUrl: 'https://www.dnd5eapi.co/api/'
+// baseUrl: 'process.env.API_BASE_URL'
 
 export const apiClient = axios.create({
-  baseURL: process.env.API_BASE_URL,
+  baseURL: "https://www.dnd5eapi.co/api/",
 });
 
 // Add a response interceptor for handling errors

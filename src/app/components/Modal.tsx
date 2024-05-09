@@ -1,10 +1,12 @@
 "use client";
 
-import ROUTES from "@/routes/routes";
-import { ModalProps } from "@/types/spell";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+
 import CloseBtn from "./Buttons/CloseBtn";
+
+import ROUTES from "@/routes/routes";
+import { ModalProps } from "@/types/spell";
 
 export default function Modal({ children }: ModalProps) {
   const router = useRouter();

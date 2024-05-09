@@ -1,10 +1,12 @@
 "use client";
 
-import { FavoriteIcon } from "@/icons/Icons";
-import ROUTES from "@/routes/routes";
-import { Spell, SpellDetail } from "@/types/spell";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+import ROUTES from "@/routes/routes";
+import { Spell, SpellDetail } from "@/types/spell";
+
+import { FavoriteIcon } from "@/icons/Icons";
 
 interface ModalFavBtnProps {
   spellDetail: SpellDetail;

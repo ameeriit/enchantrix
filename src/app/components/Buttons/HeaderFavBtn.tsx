@@ -1,9 +1,11 @@
 "use client";
 
-import { FavoriteIcon } from "@/icons/Icons";
-import ROUTES from "@/routes/routes";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+
+import ROUTES from "@/routes/routes";
+
+import { FavoriteIcon } from "@/icons/Icons";
 
 export default function HeaderFavBtn() {
   const router = useRouter();

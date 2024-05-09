@@ -1,7 +1,9 @@
-import { getSpellList } from "@/api/getSpellLists";
-import { SpellLevel } from "@/icons/Icons";
-import { Spell, SpellByLevel, SpellsByLevel } from "@/types/spell";
 import Link from "next/link";
+
+import { getSpellList } from "@/api/getSpellLists";
+import { Spell, SpellByLevel, SpellsByLevel } from "@/types/spell";
+
+import { SpellLevel } from "@/icons/Icons";
 
 export default async function SpellList() {
   const spells = await getSpellList();

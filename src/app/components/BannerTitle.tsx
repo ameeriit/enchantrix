@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import bannerBg from "../../assets/bg-enchantrix.jpg";
 
 export default function BannerTitle({ title }: { title: string }) {

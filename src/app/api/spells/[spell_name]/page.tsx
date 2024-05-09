@@ -1,5 +1,7 @@
 import { getIndividualSpellDetails } from "@/api/getIndividualSpellDetails";
+
 import SpellDetails from "@/app/components/SpellDetails";
+
 import { SpellDetail } from "@/types/spell";
 
 type PageProps = {
