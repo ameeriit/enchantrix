@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Ma_Shan_Zheng } from "next/font/google";
-import BannerTitle from "./components/BannerTitle";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import "./globals.css";
+
+import "@/app/globals.css";
+import BannerTitle from "@/components/BannerTitle";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Enchantrix",

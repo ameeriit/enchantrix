@@ -1,6 +1,6 @@
 import { getIndividualSpellDetails } from "@/api/getIndividualSpellDetails";
 
-import SpellDetails from "@/app/components/SpellDetails";
+import SpellDetails from "@/components/SpellDetails";
 
 import { SpellDetail } from "@/types/spell";
 

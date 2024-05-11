@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import CloseBtn from "./Buttons/CloseBtn";
+import CloseBtn from "@/components/Buttons/CloseBtn";
 
 import ROUTES from "@/routes/routes";
 import { ModalProps } from "@/types/spell";

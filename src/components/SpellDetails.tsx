@@ -1,6 +1,6 @@
 import ModalFavBtn from "./Buttons/ModalFavBtn";
-import Modal from "./Modal";
 
+import Modal from "@/components/Modal";
 import { SpellDetail } from "@/types/spell";
 
 interface SpellDetailsProps {

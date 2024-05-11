@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-import HeaderFavBtn from "./Buttons/HeaderFavBtn";
-
 import ROUTES from "@/routes/routes";
 
+import HeaderFavBtn from "@/components/Buttons/HeaderFavBtn";
 import { Logo } from "@/icons/Icons";
 
 export default function Header() {
