@@ -8,6 +8,14 @@
   }
 }
 
+.font-mashan {
+  font-family: var(--font-mashan);
+}
+
+.font-sedgwick {
+  font-family: var(--font-sedgwick);
+}
+
 h1 {
   @apply text-6xl font-bold mb-4;
 }
